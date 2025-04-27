@@ -120,7 +120,6 @@
     background-size: cover;
     background-position: center;
     
-  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,6 +133,11 @@
   .card1 {
     background-image: url(../images/naa/tocumwal-naa-1.jpg);
   }
+  .card1:hover {
+    scale: 1.5;
+  }
+
+
   .card2 {
     background-image: url(../images/misc/tocumwal-misc-5.jpg);
   }
