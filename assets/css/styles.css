@@ -44,6 +44,11 @@ h1 {
     scale: 90%;
   }
 
+  .logo:hover {
+    scale: 100%;
+    transition: scale 400ms ease-in-out;
+  }
+
   h2 {
     font-size: 45px;
     padding-top: 4rem;
@@ -126,11 +131,11 @@ nav a {
   letter-spacing: 0.1em;
   font-size: 20px;
 }
-  nav a:hover {
-    color: #000000;
-  }
 
-
+nav a:hover {
+  font-weight: 1000;
+}
+  
   /* use grid for boxes */
   a {
   color: unset;
@@ -317,9 +322,15 @@ footer {
   align-items: center;
   color: white;
   border-bottom: 2px solid white;
-  font-size: 24px;
-
+  font-size: 18px;
+  text-align: center;
 }
+
+.links ul {
+    display: flex;
+    gap: 18rem;
+    padding-left: 4rem;
+  }
 
 .image {
   grid-area: image;
@@ -359,4 +370,19 @@ footer {
       padding-left: 10px;
       object-position: center;
     }
+  }
+
+  @media (max-width: 1592px) {
+
+    .links ul {
+      gap: 6rem;
+      padding-left: 4rem;
+    }
+
+    nav a { 
+      padding-left: 1.2em;
+      padding-right: 1.2em;
+      font-size: 16px;
+    }
+    
   }
