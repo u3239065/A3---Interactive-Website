@@ -46,7 +46,7 @@ h1 {
 
   .logo:hover {
     scale: 100%;
-    transition: scale 400ms ease-in-out;
+    transition: scale 300ms ease-in-out;
   }
 
   h2 {
@@ -58,16 +58,14 @@ h1 {
     font-variant: small-caps;
     font-weight: 600;
   }
-  
-h3 {
-  font-size: 1.8rem;
-  font-weight: 700;
-}
 
-p {
-  margin-bottom: 2em;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
+.heroimage {
+display: flex;
+align-content: center;
+padding-top: 150px;
+width: 100%;
+height: 100%;
+border-radius: 12px;
 }
 
 .wrapper {
@@ -75,26 +73,12 @@ p {
   width: 80%;
 }
 
-.hero {
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  background-image: url(../images/trove/tocumwal-trove-2.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
 .hero h3 {
-  /* font-size: 2vw + 1rem; */
+  display: flex;
   font-size: clamp(1rem, 2vw + 1rem, 3rem);
-  /* (phones, preferred fluid size - scales with viewport width, maximum font-size) */
-  /* text-transform: uppercase; */
-
   color: #ffffff;
-  background-color: rgba(0, 0, 0, .8);
   padding: .5em;
-  text-align: center;
+  justify-content: center;
 }
 
 /* use flexbox for layout */
@@ -197,25 +181,25 @@ nav a:hover {
   height: 100%;
 }
 
-.card-image__background--history {
+.card-image__background--currency {
   background: url('https://www.be.unsw.edu.au/sites/default/files/news-images/3213483485_d7e8c7ea8a.jpg')
     center no-repeat;
   background-size: cover;
 }
 
-.card-image__background--lifecycle {
+.card-image__background--chairs {
   background: url('https://www.artnet.com/WebServices/images/ll00216lldTF5GFgvTeR3CfDrCWvaHBOcjt8D/gordon-andrews-rondo-chairs-(pair).jpg')
     center no-repeat;
   background-size: cover;
 }
 
-.card-image__background--habitat {
+.card-image__background--rbalogo {
   background: url('https://unreserved.rba.gov.au/assets/display/407461-max?u=5fc0c20ccbbb60d6c09906ddce6d4e68')
     center no-repeat;
   background-size: cover;
 }
 
-.card-image__background--future {
+.card-image__background--graphicdesign {
   background: url('https://github.com/UC-Design/11056-source-content/blob/main/gordon-andrews/images/andrews-powerhouse-16.jpeg?raw=true') center no-repeat;
   background-size: cover;
 }
@@ -359,11 +343,23 @@ footer {
   
     nav a {
       padding: 0.4em;
-      font-size: 70%;
       text-align: center;
-    
+      font-size: 10px;
     }
 
+    header .wrapper {
+      display: flex ;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+
+  h2 {
+    font-size: 24px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+    
     .logo {
       width: 320px;
       padding: 20px;
@@ -379,10 +375,83 @@ footer {
       padding-left: 4rem;
     }
 
-    nav a { 
-      padding-left: 1.2em;
-      padding-right: 1.2em;
-      font-size: 16px;
+  }
+
+  @media (max-width: 1180px) {
+    .footer {
+      display: grid;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+      margin-top: .5em;
+      background-color: #3B3B3B;
+      border-radius: 10px 10px 0 0;
+    }
+  
+    .links {
+      grid-column: 1 / 4;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      font-size: 12px;
+      padding-bottom: 80px;
+    }
+
+    .links ul {
+      display: flex;
+      padding-left: 1rem;
+      gap: 4.5rem;
     }
     
+    .blocks {
+      grid-column: 1 / 4;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      justify-content: center;
+      height:50%; 
+      padding-top: 24px;
+    }
+
+    .block {
+      display: grid;
+      height: 40px;
+      width: 120px;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+    }
+
+    .block--green {
+      background: green;
+    }
+    
+    .block--lightgreen {
+      background: yellowgreen;
+    }
+    
+    .block--yellow {
+      background: darkgoldenrod;
+    }
+    
+    .contact {
+      grid-area: contact;
+      grid-column: 1 / 4;
+      padding: 0.5rem;
+      font-size: 12px;
+    }
+    
+    .disclaimer {
+      grid-column: 1 / 4;
+      padding-top: 0.5rem;
+      font-size: 12px;
+      border-right: 0;
+      line-height: 14px;
+    }
+  
+    .image {
+      grid-column: 1 / 4;
+      padding-top: 100px;
+      scale: 50%;
+      justify-content: center;
+    }
   }
