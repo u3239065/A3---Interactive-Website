@@ -27,13 +27,149 @@
       </div>
     </header>
 
-    <div class="hero">
-      <div class="wrapper">
-        <h3>
-         PREVIOUS WORKS PAGE
-        </h3>
-      </div>
+    <div class="wrapper">
+      <h2>
+        learn about all of gordon andrews most impactful work that he has curated over his career. </h2>
     </div>
+    
+      <main>
+        <div class="cards">
+          <div class="expand-card expand-card--left">
+            <div class="card__cover">
+              <h2 class="cover__header">the brilliance of chair design </h2>
+              <div class="cover__gallery">
+                <div class="gallery__item card__main">
+                  <div class="card-image__background-previousworks-chair"></div>
+                  <div class="card-image__text-previousworks">
+                    Gordon Andrews is well remembered for his contributions as an interior designer, designing a multitude of interior chair pieces within his time. His most infamous piece is the ‘Gazelle’ Chair designed in the year 1950 which features an ovoid upholstered seat, steel legs and a scroll-shaped backrest for support. Other chairs such as the ‘Rondo’ are known for its mid-century modern aesthetic.
 
+                    Within the industry of furniture design, Andrews heavily influenced the Australian scene, influencing a more sleek, modern aesthetic nullifying older aesthetics and implementing contemporary design choices. Even though he is known for his contributions to Australia first decimal currency, Andrews played a significant part in re-modelling Australian furniture design and his influence is a key mainframe of his design legacy.
+                  </div>
+                </div>
+                <div class="gallery__item card__image-1-chair"></div>
+                <div class="gallery__item card__image-2-chair"></div>
+                <div class="expand-contract__button">
+                  <button onclick="expand(event)">⮞</button>
+                </div>
+              </div>
+              <div class="cover__footer">
+                <p>By Gordon Andrews</p>
+              </div>
+            </div>
+          </div>
+          <div class="expand-card expand-card--right">
+            <div class="card__cover">
+              <h2 class="cover__header">the intergration of decimal currency</h2>
+              <div class="cover__gallery">
+                <div class="gallery__item card__main">
+                  <div class="card-image__background-previousworks-currency"></div>
+                  <div class="card-image__text-previousworks">
+                    During 1966, Gordon Andrews was deeply committed to designing Australia’s first decimal currency. His aim was to incorporate modern and unique Australian designs that resemble the culture of Australia drawing major inspiration from native fauna, flora, historical figures and aboriginal artistry. 
+
+His major directive stride was the reject British colonial influences and instead worth with local collaborators such as artists and engravers to achieve high security standards within the notes themselves. His pure passion and dedication to this project led to an iconic and everlasting banknote design that resembled Australian culture but maintaining functionality and security that would lead his designs too become benchmarks of currency design.
+                  </div>
+                </div>
+                <div class="gallery__item card__image-1-currency"></div>
+                <div class="gallery__item card__image-2-currency"></div>
+                <div class="expand-contract__button">
+                  <button onclick="expand(event)">⮜</button>
+                </div>
+              </div>
+              <div class="cover__footer">
+                <p>By Gordon Andrews</p>
+              </div>
+            </div>
+          </div>
+          <div class="expand-card expand-card--left">
+            <div class="card__cover">
+              <h2 class="cover__header">the design of the reserve bank of australia logo</h2>
+              <div class="cover__gallery">
+                <div class="gallery__item card__main">
+                  <div class="card-image__background-previousworks-rba"></div>
+                  <div class="card-image__text-previousworks">
+                    In 1965, Gordon Andrews was commissioned to create a new visual identify of the RBA by producing their logo as their visual personality. His minimalist design skills encapsulated the RBA’s new logo into a clean, sleek and modern representation of the bank’s stability and progress. His minimalist design emphasized simplicity and functionality, making it versatile to apply to any circumstance within the brands identity.
+
+Gordon Andrews contribution to his 1965 design still remains as significant as ever, as it displays a strong display of Australian graphical design that is still being used in today’s era. His design ultimately reinforces the banks credibility through strong visual branding produced by Gordon Andrews that is perceived as timeless through his minimalist and influential design techniques.
+                  </div>
+                </div>
+                <div class="gallery__item card__image-1-rba"></div>
+                <div class="gallery__item card__image-2-rba"></div>
+                <div class="expand-contract__button">
+                  <button onclick="expand(event)">⮞</button>
+                </div>
+              </div>
+              <div class="cover__footer">
+                <p>By Gordon Andrews</p>
+              </div>
+            </div>
+          </div>
+          <div class="expand-card expand-card--right">
+            <div class="card__cover">
+              <h2 class="cover__header">revolutionary australian graphical design</h2>
+              <div class="cover__gallery">
+                <div class="gallery__item card__main">
+                  <div class="card-image__background-previousworks-graphics"></div>
+                  <div class="card-image__text-previousworks">
+                    Similar to other works and examples such as his decimal currency and RBA logo contributions, Gordon Andrews has contributed massively to Australian graphics design and its vision it has taken. Other examples include wayfinding techniques present in building such as the Cameron Offices located in Belconnen. His unique and contemporary designs standout upon others with his fusion of 1950/60’s design queues that have the ability to stand the test of time.
+
+Gordon Andrews has also done graphics design work for institutions such as the Sydney Opera House and the Powerhouse Museum that are both unique in technique and design. Regarded as one of Australia’s most foremost designers, Gordon Andrews blends his expertise in Industrial design and interior design into graphical masterpieces.
+                  </div>
+                </div>
+                <div class="gallery__item card__image-1-graphics"></div>
+                <div class="gallery__item card__image-2-graphics"></div>
+                <div class="expand-contract__button">
+                  <button onclick="expand(event)">⮜</button>
+                </div>
+              </div>
+              <div class="cover__footer">
+                <p>By Gordon Andrews</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          function expand(event) {
+            const element = event.target;
+            const card = element.closest('.expand-card');
+            card.classList.toggle('expanded');
+            element.innerText = element.innerText == '⮞' ? '⮜' : '⮞';
+          }
+        </script>
+      </main>
+  
+      <footer>
+        <div class ="container">
+          <div class="footer">
+            <div class="footer__details">
+              <div class="footer__blocks">
+                <span class="block block--green"></span>
+                <span class="block block--lightgreen"></span>
+                <span class="block block--yellow"></span>
+              </div>
+              <div class="footer__logo">
+                <a href = "index.html">
+                <img
+                  style="height: 50px; width: 100%"
+                  src="assets\Images\Gordon Andrews Logo WHITE.png"
+                />
+                </a>
+              </div>
+              <span class="footer__separator"></span>
+              <div class="footer__links">
+                <a class="footer__link footer__link--active" href="previousworks.html">Previous Works</a>
+                <a class="footer__link" href="importance.html">Importance</a>
+                <a class="footer__link" href="car">Career & Legacy</a>
+              </div>
+              <div class="footer__contact-details">
+                <div class="contact_details__item">This website was produced by students in the Faculty of Arts & Design, University of Canberra, 2025.</div>
+                <span class="contact-details__separator"></span>
+                <div class="contact_details__item">
+                  Contact Email:  u3239065@uni.canberra.edu.au
+                </div>
+              </div>
+            </div>
+          </div>
+      </footer>
+    </body>
     
 </html>

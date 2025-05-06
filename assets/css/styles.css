@@ -59,15 +59,6 @@ h1 {
     font-weight: 600;
   }
 
-.heroimage {
-display: flex;
-align-content: center;
-padding-top: 150px;
-width: 100%;
-height: 100%;
-border-radius: 12px;
-}
-
 .wrapper {
   margin: 0 auto;
   width: 80%;
@@ -81,14 +72,15 @@ border-radius: 12px;
   justify-content: center;
 }
 
-/* use flexbox for layout */
 header {
   background: rgb(255, 255, 255);
   padding: 1em 0;
   box-shadow: 2px 2px 7px 3px rgb(156, 156, 156);
   border-radius: 0px 0px 28px 28px;
-  position: fixed;
-  width: 100%
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin-bottom: 3rem;
 }
 
 header .wrapper {
@@ -129,11 +121,10 @@ nav a:hover {
     'history . skills';
   justify-content: space-between;
   background: url('/assets/Images/gordon andrews hero image.png')
-    center / cover;
+    top / cover;
   color: white;
   padding: 2rem;
-  max-height: 700px;
-  padding-top: 190px;
+  max-height: 1000px;
 }
 
 .infographic--bubble {
@@ -200,6 +191,7 @@ nav a:hover {
 
 .history__item {
   padding-left: 1rem;
+  font-size: 18px;
 }
 
 .history__item:last-child {
@@ -229,12 +221,13 @@ nav a:hover {
 
 @media (max-width: 595px) {
   .skills__title {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
   }
   .infographic__blurb {
     grid-area: blurb;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
   }
 
@@ -244,8 +237,12 @@ nav a:hover {
   }
   .skill__item {
     font-size: 18px;
-  }
 
+  }
+  .history__item {
+    font-size: 14px;
+    line-height: 16px;
+  }
   .infographic {
     grid-template-areas:
       'title blurb blurb'
@@ -563,3 +560,361 @@ nav a:hover {
 
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+  
+  .expand-card {
+    width: 50%;
+    border-radius: 10px;
+    transition: width 250ms;
+  }
+  
+  .expand-card.expanded {
+    width: 100%;
+  }
+  
+  .expand-card--left {
+    background: linear-gradient(0.25turn, #75963F, #bfd1a3);
+    border: 1px solid rgb(61, 167, 61);
+    align-self: flex-start;
+  }
+  
+  .expand-card--right {
+    background: linear-gradient(0.25turn,#ebd9c3, #E09738);
+    border: 1px solid #E2C8A7;
+    align-self: flex-end;
+  }
+  
+  .card__cover {
+    display: grid;
+    grid-template-areas:
+      'header'
+      'cards'
+      'footer';
+    padding: 0.75rem;
+  }
+  
+  .cover__gallery {
+    grid-area: cards;
+    display: grid;
+    gap: 0.5rem;
+    height: 20rem;
+  }
+  
+  .cover__header {
+    grid-area: header;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+  }
+  
+  .cover__footer {
+    grid-area: footer;
+    padding-top: 1rem;
+    color: #3C3B3B;
+  }
+  
+  .expand-card--left .cover__header,
+  .expand-card--left .cover__footer {
+    text-align: left;
+  }
+  
+  .expand-card--right .cover__header,
+  .expand-card--right .cover__footer {
+    text-align: right;
+  }
+  
+  .expand-card--left .cover__gallery {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    grid-template-areas: 'main image-1 image-2 button';
+  }
+  
+  .expand-card--right .cover__gallery {
+    grid-template-rows: 1fr;
+    grid-template-columns: auto 1fr 1fr 1fr;
+    grid-template-areas: 'button image-1 image-2 main ';
+  }
+  
+  .expand-card--left.expanded .cover__gallery {
+    grid-template-areas:
+      'main image-1 button'
+      'main image-2 button';
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 1fr auto;
+  }
+  
+  .expand-card--right.expanded .cover__gallery {
+    grid-template-areas:
+      'button image-1 . main'
+      'button image-2 . main';
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto 1fr 0fr 3fr;
+  }
+  
+  .card__main {
+    grid-area: main;
+  }
+  
+  .card__image-1-chair {
+    grid-area: image-1;
+    background: url('https://vamptvintagedesign.com/wp-content/uploads/2020/05/Gordon-Andrews-Rondo-chair-375x400.jpg')
+      center / cover;
+  }
+  
+  .card__image-2-chair {
+    grid-area: image-2;
+    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/446365.jpg/w=2560,q=75,metadata=keep')
+      center / cover;
+  }
+  
+  .expanded .card__image-1-chair {
+    background: url('https://www.artnet.com/WebServices/images/ll00216lldTF5GFgvTeR3CfDrCWvaHBOcjt8D/gordon-andrews-rondo-chairs-(pair).jpg')
+      center / cover;
+  }
+  
+  .expanded .card__image-2-chair {
+    background: url('https://img.carters.com.au/b27015b6d765185a96c79922b3f28ca6.jpg')
+      center / cover;
+  }
+  
+  .card-image__background-previousworks-chair {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/1668160.jpg/w=2560,q=75,metadata=keep')
+      center / cover;
+  }
+
+  .card__image-1-currency {
+    grid-area: image-1;
+    background: url('https://insidestory.org.au/wp-content/uploads/2017/07/6c21686c-2.jpg')
+      center / cover;
+  }
+  
+  .card__image-2-currency {
+    grid-area: image-2;
+    background: url('https://www.be.unsw.edu.au/sites/default/files/news-images/3213483485_d7e8c7ea8a.jpg')
+      center / cover;
+  }
+  
+  .expanded .card__image-1-currency {
+    background: url('https://insidestory.org.au/wp-content/uploads/2017/07/76f170f6-10.jpg')
+      center / cover;
+  }
+  
+  .expanded .card__image-2-currency {
+    background: url('https://www.architectureanddesign.com.au/_next/image?url=https%3A%2F%2Fassets.architectureanddesign.com.au%2Fone-decimal-image-1.jpg&w=1080&q=75')
+      center / cover;
+  }
+  
+  .card-image__background-previousworks-currency {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background: url('https://a-g-i.s3.eu-west-3.amazonaws.com/gordonandrews/_1600xAUTO_crop_center-center_75_none/Andrews_01.jpg')
+      center / cover;
+  }
+
+  .card__image-1-rba {
+    grid-area: image-1;
+    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/266580.jpg/w=2560,q=75,metadata=keep')
+      center / cover;
+  }
+  
+  .card__image-2-rba {
+    grid-area: image-2;
+    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/880874.jpg/w=2560,q=75,metadata=keep')
+      center / cover;
+  }
+  
+  .expanded .card__image-1-rba {
+    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/880880.jpg/w=2560,q=75,metadata=keep')
+      center / cover;
+  }
+  
+  .expanded .card__image-2-rba {
+    background: url('https://unreserved.rba.gov.au/assets/display/407461-max?u=5fc0c20ccbbb60d6c09906ddce6d4e68')
+      center / cover;
+  }
+  
+  .card-image__background-previousworks-rba {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/1630421.jpg/w=1200,q=75,metadata=keep')
+      center / cover;
+  }
+
+  .card__image-1-graphics {
+    grid-area: image-1;
+    background: url('https://a-g-i.s3.eu-west-3.amazonaws.com/gordonandrews/Andrews_03.jpg')
+      top / cover;
+  }
+  
+  .card__image-2-graphics {
+    grid-area: image-2;
+    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/1331293.jpg/w=400,q=75,metadata=keep')
+      center / cover;
+  }
+  
+  .expanded .card__image-1-graphics {
+    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/880865.jpg/w=2560,q=75,metadata=keep')
+      center / cover;
+  }
+  
+  .expanded .card__image-2-graphics {
+    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/880889.jpg/w=2560,q=75,metadata=keep')
+      center / cover;
+  }
+  
+  .card-image__background-previousworks-graphics {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background: url('https://tabithatindall.wordpress.com/wp-content/uploads/2014/08/g-andrews.jpg?w=1400')
+      center / cover;
+  }
+  
+  .card-image__text-previousworks {
+    display: none;
+    position: relative;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 0.75rem;
+    margin: 3.5rem;
+    font-size: 18px;
+    width: 100%;
+    line-height: 24px;
+  }
+  
+  .expanded .card-image__background-previousworks {
+    filter: blur(2px);
+  }
+  
+  .expanded .card-image__text-previousworks {
+    display: block;
+    opacity: 1;
+  }
+  
+  .expand-contract__button {
+    grid-area: button;
+    display: flex;
+    place-items: center;
+  }
+  
+  .gallery__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 595px) {
+    .expand-card {
+      width: 100%;
+    }
+    .expand-card--left .cover__gallery {
+      grid-template-rows: repeat(3, 1fr) auto;
+      grid-template-columns: 1fr;
+      grid-template-areas: 'main' ' image-1' 'image-2' 'button';
+    }
+    .expand-card--left.expanded .cover__gallery {
+      grid-template-areas: 'main main' 'main main' 'image-1 image-2' 'button button';
+      grid-template-rows: repeat(3, 1fr) auto;
+      grid-template-columns: 1fr 1fr;
+    }
+    .expand-card--right .cover__gallery {
+      grid-template-rows: repeat(3, 1fr) auto;
+      grid-template-columns: 1fr;
+      grid-template-areas: 'main' ' image-1' 'image-2' 'button';
+    }
+    .expand-card--right.expanded .cover__gallery {
+      grid-template-areas: 'main main' 'main main' 'image-1 image-2' 'button button';
+      grid-template-rows: repeat(3, 1fr) auto;
+      grid-template-columns: 1fr 1fr;
+    }
+    .cards {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    .card-image__text-previousworks {
+      font-size: 8px;
+      line-height: 10px;
+      margin: .5rem;
+    }
+
+    .cover__header {
+      grid-area: header;
+      padding-top: .5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
