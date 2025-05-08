@@ -36,6 +36,7 @@ body {
 h1 {
   color: #000000;
   }
+  /* black logo intergation to sit withinn the nav bar. Has defined width and height with 90% scaling. Made by me. */
   .logo {
     background: url('Gordon Andrews logo.png');
     width: 460px;
@@ -43,12 +44,12 @@ h1 {
     padding: 10px;
     scale: 90%;
   }
-
+/* light logo animation hover to increase interactivity and feedback from user interaction. */
   .logo:hover {
     scale: 100%;
     transition: scale 300ms ease-in-out;
   }
-
+/* heading describing the overview of the website pages. This is ordered at the top of every page. */
   h2 {
     font-size: 45px;
     padding-top: 4rem;
@@ -58,7 +59,7 @@ h1 {
     font-variant: small-caps;
     font-weight: 600;
   }
-
+/* Confining the nav and footer to have a fixed width of 80% which spaces the elements out nicely. */
 .wrapper {
   margin: 0 auto;
   width: 80%;
@@ -71,7 +72,8 @@ h1 {
   padding: .5em;
   justify-content: center;
 }
-
+/* Confining the nav bar to top of the page, fixing it in position while not interupting any elements underneath. Using so users 
+can access portions of the navigation material even when they're at the bottom or middle of the page. */
 header {
   background: rgb(255, 255, 255);
   padding: 1em 0;
@@ -89,6 +91,7 @@ header .wrapper {
   align-items: center;
   flex-wrap: wrap;
 }
+/* Allows images to not clip over the top of the navigation bar. */
 header {
   z-index: 2;
 }
@@ -97,7 +100,7 @@ nav ul {
   display: flex;
   gap: 0.3em;
 }
-
+/* Text decoration and gap properties of the headings within the nav bar.*/
 nav a {
   text-decoration: none;
   color: #3C3B3B;
@@ -107,11 +110,11 @@ nav a {
   letter-spacing: 0.1em;
   font-size: 20px;
 }
-
+/* Thicker font weight when hovering over navigation tools, allows feedback that the user can visually see*/
 nav a:hover {
   font-weight: 1000;
 }
-
+/* Orientation of infographic hero image. Using grid display settings to effectively layout each portion of the infographic including information and sub-headings.*/
 .infographic {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(3, 1fr);
@@ -126,7 +129,7 @@ nav a:hover {
   padding: 2rem;
   max-height: 1000px;
 }
-
+/* Used to hoouse the title and to create a glassmorphism blur as an underlaying background.*/
 .infographic--bubble {
   display: flex;
   flex-direction: column;
@@ -140,12 +143,13 @@ nav a:hover {
   border: #ffffff 2px solid;
 }
 
+/* Used to house the title of the infographic. In this case , it is Gordon Andrews' name, date of birth and death date.*/
 .infographic__title {
   grid-area: title;
   font-size: 1.5rem;
   font-weight: 700;
 }
-
+/* Display flex used to create history items, with multipel dots points.*/
 .infographic__history {
   grid-area: history;
   display: flex;
@@ -155,7 +159,7 @@ nav a:hover {
   gap: 1rem;
   margin: 2rem;
 }
-
+/* Properties to create the dashed line around the dot points of history.*/
 .history__line {
   box-sizing: border-box;
   position: absolute;
@@ -166,7 +170,7 @@ nav a:hover {
   height: 100%;
   width: 10rem;
 }
-
+/* Used to create space and the final dot on each end of the line.*/
 .history__line::before {
   content: '';
   position: absolute;
@@ -189,6 +193,7 @@ nav a:hover {
   height: 0.5rem;
 }
 
+/* Hisory items including his birth place, training, workings and death date.*/
 .history__item {
   padding-left: 1rem;
   font-size: 18px;
@@ -197,18 +202,18 @@ nav a:hover {
 .history__item:last-child {
   padding-bottom: 1rem;
 }
-
+/* A brief blurb of Gordon Andrews life.*/
 .infographic__blurb {
   grid-area: blurb;
   font-size: 1.25rem;
 }
-
+/* This section includes the bubble and skill disciplines that Gordon Andrews possessed. */
 .infographic__skills {
   grid-area: skills;
   display: flex;
   flex-direction: column;
 }
-
+/* Skill disiciplines of Gordon Andrews.*/
 .skills__title {
   font-size: 1.25rem;
   font-weight: 700;
@@ -219,6 +224,8 @@ nav a:hover {
   font-weight: 700;
 }
 
+/* Certain properties above to confine to mobile display settings. This mostly included font size,
+ font weight and line height foor text legibility. A minor grid format change was implemented via display grid settings so the viewers can clearly see the hero image in the background/*/
 @media (max-width: 595px) {
   .skills__title {
     font-size: 16px;
@@ -252,23 +259,23 @@ nav a:hover {
 }
 
   
-  /* use grid for boxes */
   a {
   color: unset;
   text-decoration: none;
 }
+/* overall div to place content in the center with the display setting of flex.*/
 .container {
   display: flex;
   place-content: center;
 }
-
+/* Using grid format for proper representation of info cards. With gaps that match all surrounds.*/
 .card-grid {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   gap: 6rem;
   place-items: center;
 }
-
+/* Info card base displaying transition animation when hovered. Box shadow has also been applied to resemble a 'floating' card in reference to the prototype.*/
 .card {
   display: flex;
   flex-direction: column;
@@ -280,12 +287,12 @@ nav a:hover {
   transition: 250ms transform;
   box-shadow: 4px 4px 6px rgb(156, 156, 156);
 }
-
+/* small property allow each odd number of cards too inherit custom colour of green, with border colours.*/
 .card:first-child, .card:last-child {
   background: #DBEAC3;
   border: 2px solid #b8da82;
 }
-
+/* Title of each info card.*/
 .card__header {
   grid-area: header;
   padding: .5rem;
@@ -294,7 +301,7 @@ nav a:hover {
   font-size: 20px;
   line-height: 26px;
 }
-
+/* Fixed width of image to display a consistent theme across all info cards. Produces irrelgular shaped info cards similar to prototype.*/
 .card-image {
   display: flex;
   flex: 1 1 auto;
@@ -312,7 +319,7 @@ nav a:hover {
   width: 100%;
   height: 100%;
 }
-
+/* Image background used in reference with title of info card.*/
 .card-image__background--currency {
   background: url('https://www.be.unsw.edu.au/sites/default/files/news-images/3213483485_d7e8c7ea8a.jpg')
     center no-repeat;
@@ -336,6 +343,8 @@ nav a:hover {
   background-size: cover;
 }
 
+/* Properties of image text to allow good contrast between text and blurred background when hovered. Off-grey font colours to provide softer viewing for the audience's eyes.*/
+
 .card-image__text {
   position: relative;
   opacity: 0;
@@ -349,6 +358,7 @@ nav a:hover {
   font-size: 22px;
   line-height: 1.25;
 }
+/* PMobile variant changes that include property changes such as height, font-size, width and grid to all card properties.*/
 
 @media (max-width: 595px) { 
   .card-image {
@@ -368,6 +378,8 @@ nav a:hover {
   }
 }
 
+/* Blur filter applied when hovering to focus eyes to image text.*/
+
 .card-image:hover {
   .card-image__background {
     filter: blur(2px);
@@ -377,11 +389,12 @@ nav a:hover {
   }
 
 }
-
+/* Minor scaling effect used to expand the info cards to allow the viewer to see the acknowledgement of interactivity with the cursor.*/
 .card:hover {
   transform: scale(1.025);
 }
 
+/* Footer division that houses all footer components.*/
 .footer {
   display: flex;
   justify-content: center;
@@ -395,7 +408,7 @@ nav a:hover {
   padding-bottom: 0.5rem;
   margin-top: 6rem;
 }
-
+/* Using grid display properties to order each grid area with their respective component. Small gap features.*/
 .footer__details {
   display: grid;
   position: relative;
@@ -404,7 +417,7 @@ nav a:hover {
     'logo separator details details';
   gap: 0.5rem;
 }
-
+/* Property changes to grid templates to organise the components in vertical formal when displayed in mobile variants..*/
 @media (max-width: 595px) {
   .block {
     height: 2.5rem !important;
@@ -438,6 +451,7 @@ nav a:hover {
     display: none;
   }
 }
+/* Footer blocks of colour with a border located on the bottom to create visual seperation between each grid area.*/
 
 .footer__blocks {
   grid-area: blocks;
@@ -449,29 +463,29 @@ nav a:hover {
   margin-bottom: 0.75rem;
 }
 
-
+/* Display blocks inline between desktop and mobile variants in reference to the prototype.*/
 .block {
   display: inline;
   height: 4rem;
   border-radius: 4px;
   flex: 1 1 auto;
 }
-
+/* Variable width with the appopriate colour choices.*/
 .block--green {
   width: 90px;
   background: green;
 }
-
+/* Variable width with the appopriate colour choices.*/
 .block--lightgreen {
   width: 60px;
   background: yellowgreen;
 }
-
+/* Variable width with the appopriate colour choices.*/
 .block--yellow {
   width: 40px;
   background: darkgoldenrod;
 }
-
+/* Another addition of navigation but located within the footer. Center-aligned with hover font-weights. Border located on the bottom to visualise seperation between footer components.*/
 .footer__links {
   grid-area: links;
   height: 100%;
@@ -481,13 +495,13 @@ nav a:hover {
   border-bottom: 2px solid white;
   justify-content: space-evenly;
 }
-
+/* This seperator div is used solely for the longer vertical border between the logo and disclaimer. */
 .footer__separator {
   grid-area: separator;
   height: 100%;
   border-left: 2px solid white;
 }
-
+/* Varying font-weight when hovered over by cursor.*/
 .footer__link {
   font-weight: 400;
 }
@@ -499,7 +513,7 @@ nav a:hover {
 .footer__link--active {
   color: rgb(255, 255, 255);
 }
-
+/* Housing of live link logo. When clicked, acts as another home screen wayfinder.*/
 .footer__logo {
   grid-area: logo;
   display: flex;
@@ -507,7 +521,7 @@ nav a:hover {
   padding-right: 12px;
   padding-bottom: 12px;
 }
-
+/* Contact details with flex display. */
 .footer__contact-details {
   grid-area: details;
   color: white;
@@ -516,11 +530,12 @@ nav a:hover {
   align-items: center;
   gap: 0.75rem;
 }
-
+/* Seperator div used as smaller border between details and disclaimer.*/
 .contact-details__separator {
   border-left: 2px solid white;
   height: 2.5rem;
 }
+/* Mobile variants of nav bar. Allowing the logo and headings to be centered and clearly displayed.*/
 
   @media (max-width: 585px) {
   
@@ -585,7 +600,8 @@ nav a:hover {
 
 
 
- 
+ /* Previous works cards displayed with flex and colomn as flex-direction. This creates an offsetting info card.*/
+
   .cards {
     display: flex;
     flex-direction: column;
@@ -593,29 +609,33 @@ nav a:hover {
     padding-left: 15rem;
     padding-right: 15rem;
   }
-  
+
+   /* 50% of the width pre-expansion with rounded corners to be consistent with other shapes in the composition.*/
+
   .expand-card {
     width: 50%;
     border-radius: 10px;
     transition: width 250ms;
   }
-  
+
+   /* post-expansion card stretches 100% of the screen, with site padding considered.*/
   .expand-card.expanded {
     width: 100%;
   }
-  
+   /* First card start left then pushes right the further down the cards go, with green colours, reflecting the colour scheme. Borders and gradients are applied to add depth and variety within the design. As  seen in the prototype.*/
   .expand-card--left {
     background: linear-gradient(0.25turn, #75963F, #bfd1a3);
     border: 1px solid rgb(61, 167, 61);
     align-self: flex-start;
   }
-  
+  /* second card relfects an orange colour scheme with the same base properties as the left cards. The difference is the colour scheme changes and direction of expansion. */
   .expand-card--right {
     background: linear-gradient(0.25turn,#ebd9c3, #E09738);
     border: 1px solid #E2C8A7;
     align-self: flex-end;
   }
   
+    /* Using display grid format to direct components within the card cover to resemble the prototype.*/
   .card__cover {
     display: grid;
     grid-template-areas:
@@ -624,20 +644,20 @@ nav a:hover {
       'footer';
     padding: 0.75rem;
   }
-  
+    /* The gallery includes the cover photos pictured pre-expansion. With small gaps and pre-determined height.*/
   .cover__gallery {
     grid-area: cards;
     display: grid;
     gap: 0.5rem;
     height: 20rem;
   }
-  
+    /* Cover header for the title of each info card. Allows spacing forthe text title the breathe and sit nicely within the design.*/
   .cover__header {
     grid-area: header;
     padding-top: 2rem;
     padding-bottom: 2.5rem;
   }
-  
+    /* Footer text is spaced to left the area breathe. The text include the author of the info card, in the case it is 'Gordon Andrews'*/
   .cover__footer {
     grid-area: footer;
     padding-top: 1rem;
@@ -685,7 +705,7 @@ nav a:hover {
   .card__main {
     grid-area: main;
   }
-  
+    /* images with -chair are all encapsulated within the chair design info card. Without this, all images within these links would be applied to every info card present.*/
   .card__image-1-chair {
     grid-area: image-1;
     background: url('https://vamptvintagedesign.com/wp-content/uploads/2020/05/Gordon-Andrews-Rondo-chair-375x400.jpg')
@@ -718,7 +738,7 @@ nav a:hover {
     background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/1668160.jpg/w=2560,q=75,metadata=keep')
       center / cover;
   }
-
+/* images with -currency are all encapsulated within the currency info card.*/
   .card__image-1-currency {
     grid-area: image-1;
     background: url('https://insidestory.org.au/wp-content/uploads/2017/07/6c21686c-2.jpg')
@@ -751,7 +771,7 @@ nav a:hover {
     background: url('https://a-g-i.s3.eu-west-3.amazonaws.com/gordonandrews/_1600xAUTO_crop_center-center_75_none/Andrews_01.jpg')
       center / cover;
   }
-
+/* images with -rba are all encapsulated within the reserve bank of australia info card.*/
   .card__image-1-rba {
     grid-area: image-1;
     background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/266580.jpg/w=2560,q=75,metadata=keep')
@@ -784,7 +804,7 @@ nav a:hover {
     background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/1630421.jpg/w=1200,q=75,metadata=keep')
       center / cover;
   }
-
+/* images with -graphics are all encapsulated within the australian graphics design info card.*/
   .card__image-1-graphics {
     grid-area: image-1;
     background: url('https://a-g-i.s3.eu-west-3.amazonaws.com/gordonandrews/Andrews_03.jpg')
@@ -817,7 +837,7 @@ nav a:hover {
     background: url('https://tabithatindall.wordpress.com/wp-content/uploads/2014/08/g-andrews.jpg?w=1400')
       center / cover;
   }
-  
+  /* This underlines the proeprties including padding, gaps etc for the text box for info cards post-expansion. This allow space around the text and bubble to allow breathing.*/
   .card-image__text-previousworks {
     display: none;
     position: relative;
@@ -831,7 +851,7 @@ nav a:hover {
     width: 100%;
     line-height: 24px;
   }
-  
+  /* filter blur to allow the reader to focus on the text box rather than the underlaying image.*/
   .expanded .card-image__background-previousworks {
     filter: blur(2px);
   }
@@ -840,7 +860,7 @@ nav a:hover {
     display: block;
     opacity: 1;
   }
-  
+  /* Adds a button feature which lets hte user expand and contract the info card to show more information or to collapse it to its original state.*/
   .expand-contract__button {
     grid-area: button;
     display: flex;
@@ -855,7 +875,8 @@ nav a:hover {
     border: 1px solid white;
     border-radius: 10px;
   }
-  
+  /* mobile variant format changes include the layout of the grid. Instead of the same layout, it is presented in a vertical manner. 
+  Font sizes and padding was considered to allow smaller fonts to breathe and become legible on smaller screens such as mobile.*/
   @media (max-width: 595px) {
     .expand-card {
       width: 100%;
