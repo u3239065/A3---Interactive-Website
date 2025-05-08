@@ -3,15 +3,14 @@
 }
 
 @font-face {
-  font-family: 'Stolzl';
-  src: url('../fonts/stolzlregular.eot');
-  src: url('../fonts/stolzlregular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/stolzlregular.woff2') format('woff2'),
-    url('../fonts/stolzlregular.woff') format('woff'),
-    url('../fonts/stolzlregular.ttf') format('truetype'),
-    url('../fonts/stolzlregular.svg#Stolzl') format('svg');
+  font-family: "Stolzl";
+  src: url("../fonts/stolzlregular.eot");
+  src: url("../fonts/stolzlregular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/stolzlregular.woff2") format("woff2"),
+    url("../fonts/stolzlregular.woff") format("woff"),
+    url("../fonts/stolzlregular.ttf") format("truetype"),
+    url("../fonts/stolzlregular.svg#Stolzl") format("svg");
 }
-
 
 html {
   font-size: 100%;
@@ -19,7 +18,7 @@ html {
 
 body {
   background: #f4f4f4;
-  font-family: 'Stolzl', sans-serif;
+  font-family: "Stolzl", sans-serif;
   font-size: 1rem;
 }
 
@@ -35,30 +34,30 @@ body {
 
 h1 {
   color: #000000;
-  }
-  /* black logo intergation to sit withinn the nav bar. Has defined width and height with 90% scaling. Made by me. */
-  .logo {
-    background: url('Gordon Andrews logo.png');
-    width: 460px;
-    height: auto;
-    padding: 10px;
-    scale: 90%;
-  }
+}
+/* black logo intergation to sit within the nav bar. Has defined width and height with 90% scaling. Made by me. */
+.logo {
+  background: url("Gordon Andrews logo.png");
+  width: 460px;
+  height: auto;
+  padding: 10px;
+  scale: 90%;
+}
 /* light logo animation hover to increase interactivity and feedback from user interaction. */
-  .logo:hover {
-    scale: 100%;
-    transition: scale 300ms ease-in-out;
-  }
+.logo:hover {
+  scale: 100%;
+  transition: scale 300ms ease-in-out;
+}
 /* heading describing the overview of the website pages. This is ordered at the top of every page. */
-  h2 {
-    font-size: 45px;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    text-align: center;
-    color: #3C3B3B;
-    font-variant: small-caps;
-    font-weight: 600;
-  }
+h2 {
+  font-size: 45px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  color: #3c3b3b;
+  font-variant: small-caps;
+  font-weight: 600;
+}
 /* Confining the nav and footer to have a fixed width of 80% which spaces the elements out nicely. */
 .wrapper {
   margin: 0 auto;
@@ -69,7 +68,7 @@ h1 {
   display: flex;
   font-size: clamp(1rem, 2vw + 1rem, 3rem);
   color: #ffffff;
-  padding: .5em;
+  padding: 0.5em;
   justify-content: center;
 }
 /* Confining the nav bar to top of the page, fixing it in position while not interupting any elements underneath. Using so users 
@@ -103,8 +102,8 @@ nav ul {
 /* Text decoration and gap properties of the headings within the nav bar.*/
 nav a {
   text-decoration: none;
-  color: #3C3B3B;
-  padding-left: .75em;
+  color: #3c3b3b;
+  padding-left: 0.75em;
   padding-right: 2.75em;
   border-radius: 0.5em;
   letter-spacing: 0.1em;
@@ -119,12 +118,11 @@ nav a:hover {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   grid-template-areas:
-    'title . blurb'
-    'history . blurb'
-    'history . skills';
+    "title . blurb"
+    "history . blurb"
+    "history . skills";
   justify-content: space-between;
-  background: url('/assets/Images/gordon andrews hero image.png')
-    top / cover;
+  background: url("/assets/Images/gordon andrews hero image.png") top / cover;
   color: white;
   padding: 2rem;
   max-height: 1000px;
@@ -172,7 +170,7 @@ nav a:hover {
 }
 /* Used to create space and the final dot on each end of the line.*/
 .history__line::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -0.25rem;
@@ -183,7 +181,7 @@ nav a:hover {
 }
 
 .history__line::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -0.25rem;
   right: 0;
@@ -235,7 +233,7 @@ nav a:hover {
   .infographic__blurb {
     grid-area: blurb;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 16px;
   }
 
   .infographic__title {
@@ -244,22 +242,25 @@ nav a:hover {
   }
   .skill__item {
     font-size: 18px;
-
   }
   .history__item {
     font-size: 14px;
     line-height: 16px;
   }
   .infographic {
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     grid-template-areas:
-      'title blurb blurb'
-      'history blurb blurb'
-      'history . skills';
+      "title  blurb"
+      ".  blurb"
+      ". skills"
+      ".  history";
+  }
+  .history__line {
+    transform: scaleX(-1);
   }
 }
 
-  
-  a {
+a {
   color: unset;
   text-decoration: none;
 }
@@ -280,7 +281,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  background: #E2C8A7;
+  background: #e2c8a7;
   border: 2px solid #dab175;
   border-radius: 25px;
   padding: 0.75rem;
@@ -288,16 +289,17 @@ nav a:hover {
   box-shadow: 4px 4px 6px rgb(156, 156, 156);
 }
 /* small property allow each odd number of cards too inherit custom colour of green, with border colours.*/
-.card:first-child, .card:last-child {
-  background: #DBEAC3;
+.card:first-child,
+.card:last-child {
+  background: #dbeac3;
   border: 2px solid #b8da82;
 }
 /* Title of each info card.*/
 .card__header {
   grid-area: header;
-  padding: .5rem;
+  padding: 0.5rem;
   font-weight: 700;
-  color: #3C3B3B;
+  color: #3c3b3b;
   font-size: 20px;
   line-height: 26px;
 }
@@ -321,25 +323,26 @@ nav a:hover {
 }
 /* Image background used in reference with title of info card.*/
 .card-image__background--currency {
-  background: url('https://www.be.unsw.edu.au/sites/default/files/news-images/3213483485_d7e8c7ea8a.jpg')
+  background: url("https://www.be.unsw.edu.au/sites/default/files/news-images/3213483485_d7e8c7ea8a.jpg")
     center no-repeat;
   background-size: cover;
 }
 
 .card-image__background--chairs {
-  background: url('https://www.artnet.com/WebServices/images/ll00216lldTF5GFgvTeR3CfDrCWvaHBOcjt8D/gordon-andrews-rondo-chairs-(pair).jpg')
+  background: url("https://www.artnet.com/WebServices/images/ll00216lldTF5GFgvTeR3CfDrCWvaHBOcjt8D/gordon-andrews-rondo-chairs-(pair).jpg")
     center no-repeat;
   background-size: cover;
 }
 
 .card-image__background--rbalogo {
-  background: url('https://unreserved.rba.gov.au/assets/display/407461-max?u=5fc0c20ccbbb60d6c09906ddce6d4e68')
+  background: url("https://unreserved.rba.gov.au/assets/display/407461-max?u=5fc0c20ccbbb60d6c09906ddce6d4e68")
     center no-repeat;
   background-size: cover;
 }
 
 .card-image__background--graphicdesign {
-  background: url('https://github.com/UC-Design/11056-source-content/blob/main/gordon-andrews/images/andrews-powerhouse-16.jpeg?raw=true') center no-repeat;
+  background: url("https://github.com/UC-Design/11056-source-content/blob/main/gordon-andrews/images/andrews-powerhouse-16.jpeg?raw=true")
+    center no-repeat;
   background-size: cover;
 }
 
@@ -354,15 +357,15 @@ nav a:hover {
   border-radius: 15px;
   padding: 2rem;
   margin: 3.5rem;
-  color: #3C3B3B;
+  color: #3c3b3b;
   font-size: 22px;
   line-height: 1.25;
 }
 /* PMobile variant changes that include property changes such as height, font-size, width and grid to all card properties.*/
 
-@media (max-width: 595px) { 
+@media (max-width: 595px) {
   .card-image {
-  max-height: 250px;
+    max-height: 250px;
   }
   .card-grid {
     grid-template: 1fr / 1fr;
@@ -387,7 +390,6 @@ nav a:hover {
   .card-image__text {
     opacity: 1;
   }
-
 }
 /* Minor scaling effect used to expand the info cards to allow the viewer to see the acknowledgement of interactivity with the cursor.*/
 .card:hover {
@@ -413,21 +415,21 @@ nav a:hover {
   display: grid;
   position: relative;
   grid-template-areas:
-    'blocks separator links links'
-    'logo separator details details';
+    "blocks separator links links"
+    "logo separator details details";
   gap: 0.5rem;
 }
-/* Property changes to grid templates to organise the components in vertical formal when displayed in mobile variants..*/
+/* Property changes to grid templates to organise the components in vertical format when displayed in mobile variants..*/
 @media (max-width: 595px) {
   .block {
     height: 2.5rem !important;
   }
   .footer__details {
     grid-template-areas:
-      'links'
-      'blocks'
-      'details'
-      'logo';
+      "links"
+      "blocks"
+      "details"
+      "logo";
   }
   .footer__links {
     border-width: 0 !important;
@@ -537,19 +539,18 @@ nav a:hover {
 }
 /* Mobile variants of nav bar. Allowing the logo and headings to be centered and clearly displayed.*/
 
-  @media (max-width: 585px) {
-  
-    nav a {
-      padding: 0.4em;
-      text-align: center;
-      font-size: 10px;
-    }
+@media (max-width: 585px) {
+  nav a {
+    padding: 0.4em;
+    text-align: center;
+    font-size: 10px;
+  }
 
-    header .wrapper {
-      display: flex ;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
+  header .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   h2 {
@@ -557,23 +558,21 @@ nav a:hover {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
-    
-    .logo {
-      width: 320px;
-      padding: 20px;
-      padding-left: 10px;
-      object-position: center;
-    }
+
+  .logo {
+    width: 320px;
+    padding: 20px;
+    padding-left: 10px;
+    object-position: center;
   }
+}
 
-  @media (max-width: 1592px) {
-
-    .links ul {
-      gap: 6rem;
-      padding-left: 4rem;
-    }
-
+@media (max-width: 1592px) {
+  .links ul {
+    gap: 6rem;
+    padding-left: 4rem;
   }
+}
 
 
 
@@ -600,342 +599,611 @@ nav a:hover {
 
 
 
- /* Previous works cards displayed with flex and colomn as flex-direction. This creates an offsetting info card.*/
 
-  .cards {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    padding-left: 15rem;
-    padding-right: 15rem;
-  }
 
-   /* 50% of the width pre-expansion with rounded corners to be consistent with other shapes in the composition.*/
 
+
+
+
+/* Previous works cards displayed with flex and colomn as flex-direction. This creates an offsetting info card.*/
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+/* 50% of the width pre-expansion with rounded corners to be consistent with other shapes in the composition.*/
+
+.expand-card {
+  width: 50%;
+  border-radius: 10px;
+  transition: width 250ms;
+}
+
+/* post-expansion card stretches 100% of the screen, with site padding considered.*/
+.expand-card.expanded {
+  width: 100%;
+}
+/* First card start left then pushes right the further down the cards go, with green colours, reflecting the colour scheme. Borders and gradients are applied to add depth and variety within the design. As  seen in the prototype.*/
+.expand-card--left {
+  background: linear-gradient(0.25turn, #75963f, #bfd1a3);
+  border: 1px solid rgb(61, 167, 61);
+  align-self: flex-start;
+}
+/* second card relfects an orange colour scheme with the same base properties as the left cards. The difference is the colour scheme changes and direction of expansion. */
+.expand-card--right {
+  background: linear-gradient(0.25turn, #ebd9c3, #e09738);
+  border: 1px solid #e2c8a7;
+  align-self: flex-end;
+}
+
+/* Using display grid format to direct components within the card cover to resemble the prototype.*/
+.card__cover {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "cards"
+    "footer";
+  padding: 0.75rem;
+}
+/* The gallery includes the cover photos pictured pre-expansion. With small gaps and pre-determined height.*/
+.cover__gallery {
+  grid-area: cards;
+  display: grid;
+  gap: 0.5rem;
+  height: 20rem;
+}
+/* Cover header for the title of each info card. Allows spacing forthe text title the breathe and sit nicely within the design.*/
+.cover__header {
+  grid-area: header;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+}
+/* Footer text is spaced to left the area breathe. The text include the author of the info card, in the case it is 'Gordon Andrews'*/
+.cover__footer {
+  grid-area: footer;
+  padding-top: 1rem;
+  color: #3c3b3b;
+}
+
+.expand-card--left .cover__header,
+.expand-card--left .cover__footer {
+  text-align: left;
+}
+
+.expand-card--right .cover__header,
+.expand-card--right .cover__footer {
+  text-align: right;
+}
+
+.expand-card--left .cover__gallery {
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  grid-template-areas: "main image-1 image-2 button";
+}
+
+.expand-card--right .cover__gallery {
+  grid-template-rows: 1fr;
+  grid-template-columns: auto 1fr 1fr 1fr;
+  grid-template-areas: "button image-1 image-2 main ";
+}
+
+.expand-card--left.expanded .cover__gallery {
+  grid-template-areas:
+    "main image-1 button"
+    "main image-2 button";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 3fr 1fr auto;
+}
+
+.expand-card--right.expanded .cover__gallery {
+  grid-template-areas:
+    "button image-1 . main"
+    "button image-2 . main";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: auto 1fr 0fr 3fr;
+}
+
+.card__main {
+  grid-area: main;
+}
+/* images with -chair are all encapsulated within the chair design info card. Without this, all images within these links would be applied to every info card present.*/
+.card__image-1-chair {
+  grid-area: image-1;
+  background: url("https://vamptvintagedesign.com/wp-content/uploads/2020/05/Gordon-Andrews-Rondo-chair-375x400.jpg")
+    center / cover;
+}
+
+.card__image-2-chair {
+  grid-area: image-2;
+  background: url("https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/446365.jpg/w=2560,q=75,metadata=keep")
+    center / cover;
+}
+
+.expanded .card__image-1-chair {
+  background: url("https://www.artnet.com/WebServices/images/ll00216lldTF5GFgvTeR3CfDrCWvaHBOcjt8D/gordon-andrews-rondo-chairs-(pair).jpg")
+    center / cover;
+}
+
+.expanded .card__image-2-chair {
+  background: url("https://img.carters.com.au/b27015b6d765185a96c79922b3f28ca6.jpg")
+    center / cover;
+}
+
+.card-image__background-previousworks-chair {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background: url("https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/1668160.jpg/w=2560,q=75,metadata=keep")
+    center / cover;
+}
+/* images with -currency are all encapsulated within the currency info card.*/
+.card__image-1-currency {
+  grid-area: image-1;
+  background: url("https://insidestory.org.au/wp-content/uploads/2017/07/6c21686c-2.jpg")
+    center / cover;
+}
+
+.card__image-2-currency {
+  grid-area: image-2;
+  background: url("https://www.be.unsw.edu.au/sites/default/files/news-images/3213483485_d7e8c7ea8a.jpg")
+    center / cover;
+}
+
+.expanded .card__image-1-currency {
+  background: url("https://insidestory.org.au/wp-content/uploads/2017/07/76f170f6-10.jpg")
+    center / cover;
+}
+
+.expanded .card__image-2-currency {
+  background: url("https://www.architectureanddesign.com.au/_next/image?url=https%3A%2F%2Fassets.architectureanddesign.com.au%2Fone-decimal-image-1.jpg&w=1080&q=75")
+    center / cover;
+}
+
+.card-image__background-previousworks-currency {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background: url("https://a-g-i.s3.eu-west-3.amazonaws.com/gordonandrews/_1600xAUTO_crop_center-center_75_none/Andrews_01.jpg")
+    center / cover;
+}
+/* images with -rba are all encapsulated within the reserve bank of australia info card.*/
+.card__image-1-rba {
+  grid-area: image-1;
+  background: url("https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/266580.jpg/w=2560,q=75,metadata=keep")
+    center / cover;
+}
+
+.card__image-2-rba {
+  grid-area: image-2;
+  background: url("https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/880874.jpg/w=2560,q=75,metadata=keep")
+    center / cover;
+}
+
+.expanded .card__image-1-rba {
+  background: url("https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/880880.jpg/w=2560,q=75,metadata=keep")
+    center / cover;
+}
+
+.expanded .card__image-2-rba {
+  background: url("https://unreserved.rba.gov.au/assets/display/407461-max?u=5fc0c20ccbbb60d6c09906ddce6d4e68")
+    center / cover;
+}
+
+.card-image__background-previousworks-rba {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background: url("https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/1630421.jpg/w=1200,q=75,metadata=keep")
+    center / cover;
+}
+/* images with -graphics are all encapsulated within the australian graphics design info card.*/
+.card__image-1-graphics {
+  grid-area: image-1;
+  background: url("https://a-g-i.s3.eu-west-3.amazonaws.com/gordonandrews/Andrews_03.jpg")
+    top / cover;
+}
+
+.card__image-2-graphics {
+  grid-area: image-2;
+  background: url("https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/1331293.jpg/w=400,q=75,metadata=keep")
+    center / cover;
+}
+
+.expanded .card__image-1-graphics {
+  background: url("https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/880865.jpg/w=2560,q=75,metadata=keep")
+    center / cover;
+}
+
+.expanded .card__image-2-graphics {
+  background: url("https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/880889.jpg/w=2560,q=75,metadata=keep")
+    center / cover;
+}
+
+.card-image__background-previousworks-graphics {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background: url("https://tabithatindall.wordpress.com/wp-content/uploads/2014/08/g-andrews.jpg?w=1400")
+    center / cover;
+}
+/* This underlines the proeprties including padding, gaps etc for the text box for info cards post-expansion. This allow space around the text and bubble to allow breathing.*/
+.card-image__text-previousworks {
+  display: none;
+  position: relative;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin: 3.5rem;
+  font-size: 18px;
+  width: 100%;
+  line-height: 24px;
+}
+/* filter blur to allow the reader to focus on the text box rather than the underlaying image.*/
+.expanded .card-image__background-previousworks {
+  filter: blur(2px);
+}
+
+.expanded .card-image__text-previousworks {
+  display: block;
+  opacity: 1;
+}
+/* Adds a button feature which lets hte user expand and contract the info card to show more information or to collapse it to its original state.*/
+.expand-contract__button {
+  grid-area: button;
+  display: flex;
+  place-items: center;
+}
+
+.gallery__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+/* mobile variant format changes include the layout of the grid. Instead of the same layout, it is presented in a vertical manner. 
+  Font sizes and padding was considered to allow smaller fonts to breathe and become legible on smaller screens such as mobile.*/
+@media (max-width: 595px) {
   .expand-card {
-    width: 50%;
-    border-radius: 10px;
-    transition: width 250ms;
-  }
-
-   /* post-expansion card stretches 100% of the screen, with site padding considered.*/
-  .expand-card.expanded {
     width: 100%;
   }
-   /* First card start left then pushes right the further down the cards go, with green colours, reflecting the colour scheme. Borders and gradients are applied to add depth and variety within the design. As  seen in the prototype.*/
-  .expand-card--left {
-    background: linear-gradient(0.25turn, #75963F, #bfd1a3);
-    border: 1px solid rgb(61, 167, 61);
-    align-self: flex-start;
+  .expand-card--left .cover__gallery {
+    grid-template-rows: repeat(3, 1fr) auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "main" " image-1" "image-2" "button";
   }
-  /* second card relfects an orange colour scheme with the same base properties as the left cards. The difference is the colour scheme changes and direction of expansion. */
-  .expand-card--right {
-    background: linear-gradient(0.25turn,#ebd9c3, #E09738);
-    border: 1px solid #E2C8A7;
-    align-self: flex-end;
+  .expand-card--left.expanded .cover__gallery {
+    grid-template-areas: "main main" "main main" "image-1 image-2" "button button";
+    grid-template-rows: repeat(3, 1fr) auto;
+    grid-template-columns: 1fr 1fr;
   }
-  
-    /* Using display grid format to direct components within the card cover to resemble the prototype.*/
-  .card__cover {
-    display: grid;
-    grid-template-areas:
-      'header'
-      'cards'
-      'footer';
-    padding: 0.75rem;
+  .expand-card--right .cover__gallery {
+    grid-template-rows: repeat(3, 1fr) auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "main" " image-1" "image-2" "button";
   }
-    /* The gallery includes the cover photos pictured pre-expansion. With small gaps and pre-determined height.*/
-  .cover__gallery {
-    grid-area: cards;
-    display: grid;
-    gap: 0.5rem;
-    height: 20rem;
+  .expand-card--right.expanded .cover__gallery {
+    grid-template-areas: "main main" "main main" "image-1 image-2" "button button";
+    grid-template-rows: repeat(3, 1fr) auto;
+    grid-template-columns: 1fr 1fr;
   }
-    /* Cover header for the title of each info card. Allows spacing forthe text title the breathe and sit nicely within the design.*/
+  .cards {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .card-image__text-previousworks {
+    font-size: 8px;
+    line-height: 10px;
+    margin: 0.5rem;
+  }
+
   .cover__header {
     grid-area: header;
-    padding-top: 2rem;
-    padding-bottom: 2.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
   }
-    /* Footer text is spaced to left the area breathe. The text include the author of the info card, in the case it is 'Gordon Andrews'*/
-  .cover__footer {
-    grid-area: footer;
-    padding-top: 1rem;
-    color: #3C3B3B;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.importance-cards {
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+.importance-card {
+  display: flex;
+  place-items: center;
+  position: relative;
+}
+
+.importance-card__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  filter: blur(2px);
+}
+
+.card__background--orange {
+  background: linear-gradient(rgba(255, 165, 0, 0.5), rgba(255, 165, 0, 0.5)),
+    url('https://agda.com.au/wp-content/uploads/2024/08/1270-gordon-andrews-976-607.png')
+      center / cover no-repeat;
+      border-radius: 28px;
+
+}
+
+.importance-card__info {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    'header'
+    'separator'
+    'content';
+  gap: 3rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #E09738;
+  border-radius: 2px;
+  padding: .75rem;
+  margin: 0.75rem;
+  font-size: 32px;
+  height: 100%;
+  width: 100%;
+  border-radius: 28px;;
+}
+
+.info__header {
+  grid-area: header;
+  text-align: center;
+  font-size:12rem;
+  padding: 1rem;
+}
+
+.info__separator {
+  grid-area: separator;
+  border-top:4px solid #E09738;
+}
+
+.info__content {
+  grid-area: content;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  line-height: 38px;
+  color: #3c3b3b;
+}
+
+.importance-cards-mentorship {
+  padding-left: 15rem;
+  padding-right: 15rem;
+  padding-top: 6rem;
+}
+
+.importance-card__info-mentorship {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    'header'
+    'separator'
+    'content';
+  gap: 3rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #75963F;
+  border-radius: 2px;
+  padding: .75rem;
+  margin: 0.75rem;
+  font-size: 32px;
+  height: 100%;
+  width: 100%;
+  border-radius: 28px;
+}
+
+.info__separator-mentorship {
+  grid-area: separator;
+  border-top: 4px solid #75963F;
+}
+
+.card__background--orange-mentorship {
+  background: linear-gradient(rgba(176, 233, 184, 0.808), rgba(145, 196, 145, 0.5)),
+    url('https://i2.wp.com/learnantiques.com.au/wp-content/uploads/2019/07/Gordon-Andrews-Lovett-Bay-Sydney.jpg?fit=1200%2C782&ssl=1')
+      center / cover no-repeat;
+      border-radius: 28px;
+
+}
+
+.info__content-mentorship {
+  grid-area: content;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  line-height: 38px;
+  color: #3c3b3b;
+}
+
+.importance-cards-versatility {
+  padding-left: 15rem;
+  padding-right: 15rem;
+  padding-top: 6rem;
+}
+
+.importance-card__info-versatility {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    'header'
+    'separator'
+    'content';
+  gap: 3rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #E09738;
+  border-radius: 2px;
+  padding: .75rem;
+  margin: 0.75rem;
+  font-size: 32px;
+  height: 100%;
+  width: 100%;
+  border-radius: 28px;;
+}
+
+.info__separator-versatility {
+  grid-area: separator;
+  border-top:4px solid #E09738;
+}
+
+.card__background--orange-versatility {
+  background: linear-gradient(rgba(255, 165, 0, 0.5), rgba(255, 165, 0, 0.5)),
+  url('https://recollection.com.au/thumbs/biographies/gordon-andrews/01_gordon-andrews_da_1967-480x480.jpg')
+    center / cover no-repeat;
+    border-radius: 28px;
+
+}
+
+.info__content-versatility {
+  grid-area: content;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  line-height: 38px;
+  color: #3c3b3b;
+}
+
+@media (max-width: 595px) {
+  .importance-cards {
+    padding-left: 3rem;
+  padding-right: 3rem;
+  }
+
+  .importance-cards-mentorship {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+  }
+
+  .importance-cards-versatility {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+  }
+
+  .info__content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    line-height: 16px;
+  }
+
+  .info__content-mentorship {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    line-height: 16px;
+  }
+
+  .info__content-versatility {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    line-height: 16px;
   }
   
-  .expand-card--left .cover__header,
-  .expand-card--left .cover__footer {
-    text-align: left;
-  }
-  
-  .expand-card--right .cover__header,
-  .expand-card--right .cover__footer {
-    text-align: right;
-  }
-  
-  .expand-card--left .cover__gallery {
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr auto;
-    grid-template-areas: 'main image-1 image-2 button';
-  }
-  
-  .expand-card--right .cover__gallery {
-    grid-template-rows: 1fr;
-    grid-template-columns: auto 1fr 1fr 1fr;
-    grid-template-areas: 'button image-1 image-2 main ';
-  }
-  
-  .expand-card--left.expanded .cover__gallery {
-    grid-template-areas:
-      'main image-1 button'
-      'main image-2 button';
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 3fr 1fr auto;
-  }
-  
-  .expand-card--right.expanded .cover__gallery {
-    grid-template-areas:
-      'button image-1 . main'
-      'button image-2 . main';
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: auto 1fr 0fr 3fr;
-  }
-  
-  .card__main {
-    grid-area: main;
-  }
-    /* images with -chair are all encapsulated within the chair design info card. Without this, all images within these links would be applied to every info card present.*/
-  .card__image-1-chair {
-    grid-area: image-1;
-    background: url('https://vamptvintagedesign.com/wp-content/uploads/2020/05/Gordon-Andrews-Rondo-chair-375x400.jpg')
-      center / cover;
-  }
-  
-  .card__image-2-chair {
-    grid-area: image-2;
-    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/446365.jpg/w=2560,q=75,metadata=keep')
-      center / cover;
-  }
-  
-  .expanded .card__image-1-chair {
-    background: url('https://www.artnet.com/WebServices/images/ll00216lldTF5GFgvTeR3CfDrCWvaHBOcjt8D/gordon-andrews-rondo-chairs-(pair).jpg')
-      center / cover;
-  }
-  
-  .expanded .card__image-2-chair {
-    background: url('https://img.carters.com.au/b27015b6d765185a96c79922b3f28ca6.jpg')
-      center / cover;
-  }
-  
-  .card-image__background-previousworks-chair {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
-    width: 100%;
+  .importance-card__info {
+    gap: .5rem;
+    border-radius: 2px;
+    padding: .75rem;
+    margin: 0.75rem;
+    font-size: 12px;
     height: 100%;
-    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/1668160.jpg/w=2560,q=75,metadata=keep')
-      center / cover;
-  }
-/* images with -currency are all encapsulated within the currency info card.*/
-  .card__image-1-currency {
-    grid-area: image-1;
-    background: url('https://insidestory.org.au/wp-content/uploads/2017/07/6c21686c-2.jpg')
-      center / cover;
-  }
-  
-  .card__image-2-currency {
-    grid-area: image-2;
-    background: url('https://www.be.unsw.edu.au/sites/default/files/news-images/3213483485_d7e8c7ea8a.jpg')
-      center / cover;
-  }
-  
-  .expanded .card__image-1-currency {
-    background: url('https://insidestory.org.au/wp-content/uploads/2017/07/76f170f6-10.jpg')
-      center / cover;
-  }
-  
-  .expanded .card__image-2-currency {
-    background: url('https://www.architectureanddesign.com.au/_next/image?url=https%3A%2F%2Fassets.architectureanddesign.com.au%2Fone-decimal-image-1.jpg&w=1080&q=75')
-      center / cover;
-  }
-  
-  .card-image__background-previousworks-currency {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
     width: 100%;
+    border-radius: 28px;;
+  }
+
+  .importance-card__info-mentorship {
+   gap: .5rem;
+    border-radius: 2px;
+    padding: .75rem;
+    margin: 0.75rem;
+    font-size: 12px;
     height: 100%;
-    background: url('https://a-g-i.s3.eu-west-3.amazonaws.com/gordonandrews/_1600xAUTO_crop_center-center_75_none/Andrews_01.jpg')
-      center / cover;
-  }
-/* images with -rba are all encapsulated within the reserve bank of australia info card.*/
-  .card__image-1-rba {
-    grid-area: image-1;
-    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/266580.jpg/w=2560,q=75,metadata=keep')
-      center / cover;
-  }
-  
-  .card__image-2-rba {
-    grid-area: image-2;
-    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/880874.jpg/w=2560,q=75,metadata=keep')
-      center / cover;
-  }
-  
-  .expanded .card__image-1-rba {
-    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/880880.jpg/w=2560,q=75,metadata=keep')
-      center / cover;
-  }
-  
-  .expanded .card__image-2-rba {
-    background: url('https://unreserved.rba.gov.au/assets/display/407461-max?u=5fc0c20ccbbb60d6c09906ddce6d4e68')
-      center / cover;
-  }
-  
-  .card-image__background-previousworks-rba {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
     width: 100%;
-    height: 100%;
-    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/1630421.jpg/w=1200,q=75,metadata=keep')
-      center / cover;
-  }
-/* images with -graphics are all encapsulated within the australian graphics design info card.*/
-  .card__image-1-graphics {
-    grid-area: image-1;
-    background: url('https://a-g-i.s3.eu-west-3.amazonaws.com/gordonandrews/Andrews_03.jpg')
-      top / cover;
-  }
-  
-  .card__image-2-graphics {
-    grid-area: image-2;
-    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/1331293.jpg/w=400,q=75,metadata=keep')
-      center / cover;
-  }
-  
-  .expanded .card__image-1-graphics {
-    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/880865.jpg/w=2560,q=75,metadata=keep')
-      center / cover;
-  }
-  
-  .expanded .card__image-2-graphics {
-    background: url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/880889.jpg/w=2560,q=75,metadata=keep')
-      center / cover;
-  }
-  
-  .card-image__background-previousworks-graphics {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    background: url('https://tabithatindall.wordpress.com/wp-content/uploads/2014/08/g-andrews.jpg?w=1400')
-      center / cover;
-  }
-  /* This underlines the proeprties including padding, gaps etc for the text box for info cards post-expansion. This allow space around the text and bubble to allow breathing.*/
-  .card-image__text-previousworks {
-    display: none;
-    position: relative;
-    opacity: 0;
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 0.75rem;
-    margin: 3.5rem;
-    font-size: 18px;
-    width: 100%;
-    line-height: 24px;
-  }
-  /* filter blur to allow the reader to focus on the text box rather than the underlaying image.*/
-  .expanded .card-image__background-previousworks {
-    filter: blur(2px);
-  }
-  
-  .expanded .card-image__text-previousworks {
-    display: block;
-    opacity: 1;
-  }
-  /* Adds a button feature which lets hte user expand and contract the info card to show more information or to collapse it to its original state.*/
-  .expand-contract__button {
-    grid-area: button;
-    display: flex;
-    place-items: center;
-  }
-  
-  .gallery__item {
-    display: flex;
-    align-items: center;
-    position: relative;
-    height: 100%;
-    border: 1px solid white;
-    border-radius: 10px;
-  }
-  /* mobile variant format changes include the layout of the grid. Instead of the same layout, it is presented in a vertical manner. 
-  Font sizes and padding was considered to allow smaller fonts to breathe and become legible on smaller screens such as mobile.*/
-  @media (max-width: 595px) {
-    .expand-card {
-      width: 100%;
-    }
-    .expand-card--left .cover__gallery {
-      grid-template-rows: repeat(3, 1fr) auto;
-      grid-template-columns: 1fr;
-      grid-template-areas: 'main' ' image-1' 'image-2' 'button';
-    }
-    .expand-card--left.expanded .cover__gallery {
-      grid-template-areas: 'main main' 'main main' 'image-1 image-2' 'button button';
-      grid-template-rows: repeat(3, 1fr) auto;
-      grid-template-columns: 1fr 1fr;
-    }
-    .expand-card--right .cover__gallery {
-      grid-template-rows: repeat(3, 1fr) auto;
-      grid-template-columns: 1fr;
-      grid-template-areas: 'main' ' image-1' 'image-2' 'button';
-    }
-    .expand-card--right.expanded .cover__gallery {
-      grid-template-areas: 'main main' 'main main' 'image-1 image-2' 'button button';
-      grid-template-rows: repeat(3, 1fr) auto;
-      grid-template-columns: 1fr 1fr;
-    }
-    .cards {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-    .card-image__text-previousworks {
-      font-size: 8px;
-      line-height: 10px;
-      margin: .5rem;
-    }
-
-    .cover__header {
-      grid-area: header;
-      padding-top: .5rem;
-      padding-bottom: 1.5rem;
-    }
+    border-radius: 28px;;
   }
 
+  .importance-card__info-versatility {
+    gap: .5rem;
+     border-radius: 2px;
+     padding: .75rem;
+     margin: 0.75rem;
+     font-size: 12px;
+     height: 100%;
+     width: 100%;
+     border-radius: 28px;;
+   }
 
+  .info__separator{
+    grid-area: separator;
+    border-top: 2px solid #E09738;
+  }
 
+  .info__separator-mentorship {
+    grid-area: separator;
+    border-top: 2px solid #75963F;
+  }
 
+  .info__separator-versatility {
+    grid-area: separator;
+    border-top: 2px solid #E09738;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+  .info__header {
+    font-size: 3rem;
+    padding: .25rem;
+  }
+}
