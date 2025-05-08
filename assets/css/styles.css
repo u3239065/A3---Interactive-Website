@@ -421,6 +421,11 @@ a {
 }
 /* Property changes to grid templates to organise the components in vertical format when displayed in mobile variants..*/
 @media (max-width: 595px) {
+
+  .footer {
+    margin-top: 3rem;
+  }
+
   .block {
     height: 2.5rem !important;
   }
@@ -911,8 +916,8 @@ a {
     padding-right: 2rem;
   }
   .card-image__text-previousworks {
-    font-size: 8px;
-    line-height: 10px;
+    font-size: 9px;
+    line-height: 11px;
     margin: 0.5rem;
   }
 
@@ -1207,3 +1212,401 @@ a {
     padding: .25rem;
   }
 }
+
+
+
+
+
+
+
+.CL-cards {
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+.CL-card {
+  display: flex;
+  place-items: center;
+  position: relative;
+}
+
+.CL-card__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  filter: blur(2px);
+}
+
+.CL-card__background--orange {
+  background: linear-gradient(rgba(8, 65, 11, 0.5), rgba(5, 56, 30, 0.5)),
+    url('https://upload.wikimedia.org/wikipedia/commons/d/d3/Technological_College%2C_Sydney.jpg')
+      center / cover no-repeat;
+      border-radius: 28px;
+
+}
+
+.CL-card__info {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    'header'
+    'separator'
+    'content';
+  gap: 3rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #325829;
+  border-radius: 2px;
+  padding: .75rem;
+  margin: 0.75rem;
+  font-size: 32px;
+  height: 100%;
+  width: 100%;
+  border-radius: 28px;;
+}
+
+.CL-info__header {
+  grid-area: header;
+  text-align: center;
+  font-size:12rem;
+  padding: 1rem;
+}
+
+.CL-info__separator {
+  grid-area: separator;
+  border-top:4px solid #325829;
+}
+
+.CL-info__content {
+  grid-area: content;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  line-height: 38px;
+  color: #3c3b3b;
+}
+
+.CL-cards-career {
+  padding-left: 15rem;
+  padding-right: 15rem;
+  padding-top: 6rem;
+}
+
+.CL-card__info-career {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    'header'
+    'separator'
+    'content';
+  gap: 3rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #E09738;
+  border-radius: 2px;
+  padding: .75rem;
+  margin: 0.75rem;
+  font-size: 32px;
+  height: 100%;
+  width: 100%;
+  border-radius: 28px;
+}
+
+.CL-info__separator-career {
+  grid-area: separator;
+  border-top: 4px solid #E09738;
+}
+
+.CL-card__background--orange-career {
+  background: linear-gradient(rgba(95, 65, 25, 0.808), rgba(100, 77, 12, 0.5)),
+    url('https://i2.wp.com/learnantiques.com.au/wp-content/uploads/2019/07/Gordon-Andrews-Lovett-Bay-Sydney.jpg?fit=1200%2C782&ssl=1')
+      center / cover no-repeat;
+      border-radius: 28px;
+
+}
+
+.CL-info__content-career {
+  grid-area: content;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  line-height: 38px;
+  color: #3c3b3b;
+}
+
+.CL-cards-influence {
+  padding-left: 15rem;
+  padding-right: 15rem;
+  padding-top: 6rem;
+}
+
+.CL-card-influence {
+  display: flex;
+  place-items: center;
+  position: relative;
+
+}
+
+.CL-card__background-influence {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  filter: blur(2px);
+}
+
+.CL-card__background--orange-influence {
+  background: linear-gradient(rgba(8, 65, 11, 0.5), rgba(5, 56, 30, 0.5)),
+    url('https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/883143.jpg/w=2560,q=75,metadata=keep')
+      center / cover no-repeat;
+      border-radius: 28px;
+
+}
+
+.CL-card__info-influence {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    'header'
+    'separator'
+    'content';
+  gap: 3rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #325829;
+  border-radius: 2px;
+  padding: .75rem;
+  margin: 0.75rem;
+  font-size: 32px;
+  height: 100%;
+  width: 100%;
+  border-radius: 28px;;
+}
+
+.CL-info__header-influence {
+  grid-area: header;
+  text-align: center;
+  font-size:12rem;
+  padding: 1rem;
+}
+
+.CL-info__separator-influence {
+  grid-area: separator;
+  border-top:4px solid #325829;
+}
+
+.CL-info__content-influence {
+  grid-area: content;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  line-height: 38px;
+  color: #3c3b3b;
+}
+
+.CL-cards-legacy {
+  padding-left: 15rem;
+  padding-right: 15rem;
+  padding-top: 6rem;
+}
+
+.CL-card__info-legacy {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    'header'
+    'separator'
+    'content';
+  gap: 3rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #E09738;
+  border-radius: 2px;
+  padding: .75rem;
+  margin: 0.75rem;
+  font-size: 32px;
+  height: 100%;
+  width: 100%;
+  border-radius: 28px;
+}
+
+.CL-info__separator-legacy {
+  grid-area: separator;
+  border-top: 4px solid #E09738;
+}
+
+.CL-card__background--orange-legacy {
+  background: linear-gradient(rgba(95, 65, 25, 0.808), rgba(100, 77, 12, 0.5)),
+    url('https://i2.wp.com/learnantiques.com.au/wp-content/uploads/2019/07/Gordon-Andrews-Lovett-Bay-Sydney.jpg?fit=1200%2C782&ssl=1')
+      center / cover no-repeat;
+      border-radius: 28px;
+
+}
+
+.CL-info__content-legacy {
+  grid-area: content;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  line-height: 38px;
+  color: #3c3b3b;
+}
+
+@media (max-width: 595px) {
+
+  .CL-cards {
+    padding-left: 3rem;
+  padding-right: 3rem;
+  }
+
+  .CL-cards-career {
+    padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 3rem;
+  }
+
+  .CL-cards-influence {
+    padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 3rem;
+  }
+
+  .CL-cards-legacy {
+    padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 3rem;
+  }
+
+  .CL-info__content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    line-height: 16px;
+  }
+
+  .CL-info__content-career {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    line-height: 16px;
+  }
+
+  .CL-info__content-influence {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    line-height: 16px;
+  }
+
+  .CL-info__content-legacy {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    line-height: 16px;
+  }
+
+  
+  .CL-card__info {
+    gap: .5rem;
+    border-radius: 2px;
+    padding: .75rem;
+    margin: 0.75rem;
+    font-size: 12px;
+    height: 100%;
+    width: 100%;
+    border-radius: 28px;;
+  }
+
+  .CL-card__info-career {
+    gap: .5rem;
+    border-radius: 2px;
+    padding: .75rem;
+    margin: 0.75rem;
+    font-size: 12px;
+    height: 100%;
+    width: 100%;
+    border-radius: 28px;;
+  }
+
+  .CL-card__info-influence {
+    gap: .5rem;
+    border-radius: 2px;
+    padding: .75rem;
+    margin: 0.75rem;
+    font-size: 12px;
+    height: 100%;
+    width: 100%;
+    border-radius: 28px;;
+  }
+
+  .CL-card__info-legacy {
+    gap: .5rem;
+    border-radius: 2px;
+    padding: .75rem;
+    margin: 0.75rem;
+    font-size: 12px;
+    height: 100%;
+    width: 100%;
+    border-radius: 28px;;
+  }
+
+  .CL-info__separator {
+    grid-area: separator;
+    border-top: 2px solid #325829;
+  }
+
+  .CL-info__separator-career {
+    grid-area: separator;
+    border-top: 2px solid #E09738;
+  }
+
+  .CL-info__separator-influence {
+    grid-area: separator;
+    border-top: 2px solid #325829;
+  }
+
+  .CL-info__separator-legacy {
+    grid-area: separator;
+    border-top: 2px solid #E09738;
+  }
+
+  .CL-info__header {
+    font-size: 3rem;
+    padding: .25rem;
+  }
+
+  .CL-info__header-career {
+    font-size: 3rem;
+    padding: .25rem;
+  }
+
+  .CL-info__header-influence {
+    font-size: 3rem;
+    padding: .25rem;
+  }
+
+  .CL-info__header-legacy {
+    font-size: 3rem;
+    padding: .25rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
