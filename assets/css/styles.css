@@ -605,7 +605,7 @@ a {
 
 
 
-
+/* PREVIOUS WORKS PAGE*/
 
 
 
@@ -944,12 +944,13 @@ a {
 
 
 
+/* IMPORTANCE PAGE*/
 
 
 
 
-
-
+/* importance cards that cover the areas of: pioneer, mentorship and versatility. Padding was used left and right to apply a fixed width between
+the overall site and the cards.*/
 
 .importance-cards {
   padding-left: 15rem;
@@ -971,7 +972,7 @@ a {
   height: 100%;
   filter: blur(2px);
 }
-
+/* linear gradient used to replicate the prototype version.*/
 .card__background--orange {
   background: linear-gradient(rgba(255, 165, 0, 0.5), rgba(255, 165, 0, 0.5)),
     url('https://agda.com.au/wp-content/uploads/2024/08/1270-gordon-andrews-976-607.png')
@@ -979,7 +980,7 @@ a {
       border-radius: 28px;
 
 }
-
+/* simple grid display used to organise th header, seperator line and content blurb of each card. this is the most efficient way.*/
 .importance-card__info {
   display: grid;
   grid-template-rows: auto auto 1fr;
@@ -999,19 +1000,19 @@ a {
   width: 100%;
   border-radius: 28px;;
 }
-
+/* center alignment to replicate prototype and also dedicated font sizes.*/
 .info__header {
   grid-area: header;
   text-align: center;
   font-size:12rem;
   padding: 1rem;
 }
-
+/* seperator div used to create the line between the header and content blurb*/
 .info__separator {
   grid-area: separator;
   border-top:4px solid #E09738;
 }
-
+/* all content text properties with padding to allow text to breathe of edges. Appropriate line-height applied with off-grey font colour for legibility.*/
 .info__content {
   grid-area: content;
   padding-left: 3rem;
@@ -1020,13 +1021,13 @@ a {
   line-height: 38px;
   color: #3c3b3b;
 }
-
+/* all same properties applied from original but for the mentorship card*/
 .importance-cards-mentorship {
   padding-left: 15rem;
   padding-right: 15rem;
   padding-top: 6rem;
 }
-
+/* all same properties applied but for the mentorship card with colour change etc.*/
 .importance-card__info-mentorship {
   display: grid;
   grid-template-rows: auto auto 1fr;
@@ -1046,12 +1047,12 @@ a {
   width: 100%;
   border-radius: 28px;
 }
-
+/* all same properties applied but for the mentorship card but green coloured line*/
 .info__separator-mentorship {
   grid-area: separator;
   border-top: 4px solid #75963F;
 }
-
+/* green linear gradient applied instead.*/
 .card__background--orange-mentorship {
   background: linear-gradient(rgba(176, 233, 184, 0.808), rgba(145, 196, 145, 0.5)),
     url('https://i2.wp.com/learnantiques.com.au/wp-content/uploads/2019/07/Gordon-Andrews-Lovett-Bay-Sydney.jpg?fit=1200%2C782&ssl=1')
@@ -1068,7 +1069,7 @@ a {
   line-height: 38px;
   color: #3c3b3b;
 }
-
+/* all same properties applied but for the versatility card*/
 .importance-cards-versatility {
   padding-left: 15rem;
   padding-right: 15rem;
@@ -1116,7 +1117,7 @@ a {
   line-height: 38px;
   color: #3c3b3b;
 }
-
+/* adjustment of padding sizes, seperator line thickness, font-sizes, gaps and width to all accomodate appropriately in the mobile variant.*/
 @media (max-width: 595px) {
   .importance-cards {
     padding-left: 3rem;
@@ -1219,6 +1220,16 @@ a {
 
 
 
+
+
+
+
+
+
+/* CAREER & LEGACY PAGE*/
+
+
+/* smiliar style to importance page cards, using the same padding technique to apply a fixed width in desktop mode.*/
 .CL-cards {
   padding-left: 15rem;
   padding-right: 15rem;
@@ -1229,7 +1240,7 @@ a {
   place-items: center;
   position: relative;
 }
-
+/* blurred underlying background to improve text contrast when applied.*/
 .CL-card__background {
   position: absolute;
   top: 0;
@@ -1239,7 +1250,7 @@ a {
   height: 100%;
   filter: blur(2px);
 }
-
+/* similar gradient applied, darker this time to replicate the prototype.*/
 .CL-card__background--orange {
   background: linear-gradient(rgba(8, 65, 11, 0.5), rgba(5, 56, 30, 0.5)),
     url('https://upload.wikimedia.org/wikipedia/commons/d/d3/Technological_College%2C_Sydney.jpg')
@@ -1247,7 +1258,7 @@ a {
       border-radius: 28px;
 
 }
-
+/* grid template used to create a simplistic orientation of componenets inside grid box. Scales down well to mobile variant.*/
 .CL-card__info {
   display: grid;
   grid-template-rows: auto auto 1fr;
@@ -1288,7 +1299,7 @@ a {
   line-height: 38px;
   color: #3c3b3b;
 }
-
+/* All lines below are for the 'career' section with the same properties applied other than colours and border colours*/
 .CL-cards-career {
   padding-left: 15rem;
   padding-right: 15rem;
@@ -1336,7 +1347,7 @@ a {
   line-height: 38px;
   color: #3c3b3b;
 }
-
+/* All lines below are for the 'influence' section with the same properties applied other than colours and border colours*/
 .CL-cards-influence {
   padding-left: 15rem;
   padding-right: 15rem;
@@ -1408,7 +1419,7 @@ a {
   line-height: 38px;
   color: #3c3b3b;
 }
-
+/* All lines below are for the 'legacy' section with the same properties applied other than colours and border colours*/
 .CL-cards-legacy {
   padding-left: 15rem;
   padding-right: 15rem;
@@ -1456,7 +1467,7 @@ a {
   line-height: 38px;
   color: #3c3b3b;
 }
-
+/* similar to the importance page, using smaller padding sizes, font sizes and gaps sizes to produce a legible mobile variant when scaled down.*/
 @media (max-width: 595px) {
 
   .CL-cards {
